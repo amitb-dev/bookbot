@@ -1,4 +1,9 @@
-from stats import word_count, chars_count
+import stats as s
+import sys
+
+if len(sys.argv) != 2:
+    print("Usage: python3 main.py <path_to_book>")
+    sys.exit(1)
 
 def get_book_text(filepath):
     with open(filepath) as f:
@@ -6,9 +11,15 @@ def get_book_text(filepath):
     return file_contents
 
 def main():
-    path_to_book = "books/frankenstein.txt"
-    book_text = get_book_text(path_to_book)
-    print(f"Found {word_count(book_text)} total words")
-    print(chars_count(book_text))
-    
+    # 1. Data Processing:
+    book_text = get_book_text(sys.argv[1])
+
+    # 2. Analysis:
+    word_count = s.word_count(book_text)
+    chars = s.chars_count(book_text)
+    sorted_chars = s.convert_and_filter(chars)
+
+    # 3. Presentation:
+    s.print_report(sys.argv[1], word_count, sorted_chars)
+
 main()
