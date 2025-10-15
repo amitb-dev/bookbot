@@ -21,11 +21,10 @@ Clean Reporting: Prints a fully structured and formatted analysis report to the 
 To run the BookBot analysis tool, execute the script from your project root (/bookbot) and pass the relative path to the book file as the first command-line argument.
 
 ### Requirements
-Python 3.8+
+* Python 3.8+
+* The target book file must be present (e.g., in the books/ directory).
 
-The target book file must be present (e.g., in the books/ directory).
-
-Execution
+### Execution
 # Example 1: Analyze Frankenstein
 python3 main.py books/frankenstein.txt
 
