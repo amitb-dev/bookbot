@@ -1,9 +1,10 @@
-BookBot CLI Analyzer
+# BookBot CLI Analyzer
+
 BookBot is a command-line utility built in Python that analyzes the text from any provided book file to calculate foundational metrics and report the most frequent characters.
 
 This project was developed as the core programming assignment for the fundamentals section of the Boot.dev curriculum.
 
-📊 Features
+## 📊 Features
 This tool performs the following tasks on the provided book text:
 
 File Input: Reads the entire contents of a book file using command-line arguments (sys.argv) and safe I/O practices (with open(...)).
@@ -16,10 +17,10 @@ Data Sorting: Sorts the final character counts from highest frequency to lowest 
 
 Clean Reporting: Prints a fully structured and formatted analysis report to the console.
 
-🚀 Usage
+## 🚀 Usage
 To run the BookBot analysis tool, execute the script from your project root (/bookbot) and pass the relative path to the book file as the first command-line argument.
 
-Requirements
+### Requirements
 Python 3.8+
 
 The target book file must be present (e.g., in the books/ directory).
